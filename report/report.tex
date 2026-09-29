@@ -215,6 +215,42 @@ quadratic and Huber fits; the source and units appear in the graph.}
 The association is near zero even though both changes occur in every state.}
 \end{figure}
 
+\clearpage
+\subsection{Distributional and residual checks}
+
+The predictor and outcome need not have matching marginal distributions.
+Each is a different percentage-point quantity, and OLS describes the
+mean outcome conditional on the predictor. Relevant diagnostics concern
+the shape and spread of residuals, influential states and the stability
+of the slope. The separate predictor and outcome histograms therefore
+do not, by themselves, invalidate any regression.
+
+The Q1 residuals have one unusual state: Sikkim's studentized residual
+is -4.30, and a Shapiro--Wilk screening test gives $p=0.016$.
+Leaving out any one state changes the Q1 linear slope only from 0.339
+to 0.439, while Huber's slope is 0.412. For Q2, a one-predictor
+Breusch--Pagan screening test suggests unequal residual spread
+($p=0.028$). Its HC3 slope standard error is 0.094, compared with
+0.074 under the constant-variance formula. The Q2 leave-one-state-out
+slopes range from 0.316 to 0.414. These diagnostics support using HC3
+and reporting Huber sensitivity, while keeping small-sample uncertainty
+and the absence of survey sampling variances in view. The tests are
+descriptive screens in only 27 states, not proof of model validity.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.88\textwidth]{regression_residuals.png}
+\caption{Studentized residuals against fitted values for the four linear
+summaries. Dashed lines mark residuals of $\pm2$.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.88\textwidth]{regression_residual_qq.png}
+\caption{Normal quantile plots of studentized residuals. Q1's lower-tail
+departure reflects the unusual Sikkim observation.}
+\end{figure}
+
 \section{Descriptive statistics}
 
 Table~\ref{tab:description} describes the 27-state distributions

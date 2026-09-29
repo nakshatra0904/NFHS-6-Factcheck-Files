@@ -19,6 +19,8 @@ These are selected exploratory questions, so the intervals are not presented as 
 
 Each question compares an intercept-only baseline, linear ordinary least squares (OLS), quadratic OLS, and Huber robust linear regression using leave-one-state-out root mean squared prediction error (RMSE). The linear slope and HC3 robust interval are the main *explanatory summary* for Q1–Q3. Huber wins prediction by only 0.04 and 0.06 points for Q1 and Q2, respectively, without changing their conclusions. Q3's quadratic wins prediction by 0.33 points, but the linear and quadratic BIC values are nearly tied; its curvature is exploratory. For Q4, the intercept-only model wins prediction, consistent with little relationship between the two rates of change. Model comparison does not establish causality.
 
+Predictor and outcome histograms need not have the same shape. Residual checks flag an unusual Q1 Sikkim observation and possible unequal residual spread in Q2. The Q1 and Q2 leave-one-state-out slopes remain positive, but HC3 intervals, Huber fits, and the [diagnostic CSV](results/model_diagnostics.csv) make these limitations explicit.
+
 The multivariate section standardizes seven state indicators before PCA and k-means. Parallel analysis supports one strong component; k=2 has the highest tested silhouette, but cluster separation is modest. Stability checks and complete state membership are saved in `results/`. These are descriptive profiles, **not a welfare ranking**: women's overweight loads positively on the first component alongside schooling. No IV or 2SLS result is presented because the fact sheets contain no credible instrument with defensible independence and exclusion restrictions.
 
 ## Files
@@ -30,12 +32,12 @@ The multivariate section standardizes seven state indicators before PCA and k-me
 | [`scripts/check_project.py`](scripts/check_project.py) | Checks CSV completeness, figures, screenshots and LaTeX image references. |
 | [`R/00_run_all.R`](R/00_run_all.R) | Runs all four questions, descriptive statistics, PCA and clustering. |
 | `R/01_*.R` through `R/04_*.R` | One standalone entry point per regression question. |
-| [`R/05_descriptives.R`](R/05_descriptives.R), [`R/06_pca_clusters.R`](R/06_pca_clusters.R) | Distribution summaries and exploratory multivariate analysis. |
+| [`R/05_descriptives.R`](R/05_descriptives.R), [`R/06_pca_clusters.R`](R/06_pca_clusters.R), [`R/07_model_diagnostics.R`](R/07_model_diagnostics.R) | Distribution summaries, multivariate analysis and regression diagnostics. |
 | [`results/`](results/) | State-level observations, model comparisons, summary CSVs, diagnostics, text output, R session details. |
-| [`figures/`](figures/) | 18 publication-oriented PNG charts; scatterplots, distribution plots, model comparisons, national changes and PCA/cluster displays. |
+| [`figures/`](figures/) | 20 publication-oriented PNG charts, including scatterplots, distributions, model comparisons and regression diagnostics. |
 | [`screenshots/`](screenshots/) | Six readable PNG summaries of actual R output. |
 | [`report/report.tex`](report/report.tex) | Complete LaTeX report with linked graphs and methods. |
-| [`report/report.pdf`](report/report.pdf) | Compiled, ten-page version of the report by Nakshatra Ghosh. |
+| [`report/report.pdf`](report/report.pdf) | Compiled, twelve-page version of the report by Nakshatra Ghosh. |
 | [`report/iv_validity_note.md`](report/iv_validity_note.md) | Substantive audit of IV candidates and required assumptions. |
 | [`prompts/extraction_prompt.md`](prompts/extraction_prompt.md) | A reusable extraction prompt and verification standard. |
 
@@ -48,7 +50,7 @@ Rscript R/00_run_all.R
 python scripts/check_project.py
 ```
 
-Individual questions can be rerun with `Rscript R/01_schooling_stunting.R`, `Rscript R/02_marriage_motherhood.R`, `Rscript R/03_digital_gender.R`, or `Rscript R/04_nutrition_transition.R`. Each sources `R/common.R` and writes its own `results/`, `figures/` and `screenshots/` outputs. Run `R/05_descriptives.R` and `R/06_pca_clusters.R` similarly. The scripts assume the working directory is the project root.
+Individual questions can be rerun with `Rscript R/01_schooling_stunting.R`, `Rscript R/02_marriage_motherhood.R`, `Rscript R/03_digital_gender.R`, or `Rscript R/04_nutrition_transition.R`. Each sources `R/common.R` and writes its own `results/`, `figures/` and `screenshots/` outputs. Run `R/05_descriptives.R`, `R/06_pca_clusters.R` and `R/07_model_diagnostics.R` similarly. The scripts assume the working directory is the project root.
 
 To regenerate the consolidated CSV from the original PDF, install the Python dependency and pass the PDF path:
 

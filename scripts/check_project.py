@@ -30,6 +30,8 @@ assert len(comparisons) == 16
 assert all(int(row["n"]) == 27 for row in comparisons)
 descriptives = csv_rows(ROOT / "results/descriptive_statistics.csv")
 assert len(descriptives) == 8
+diagnostics = csv_rows(ROOT / "results/model_diagnostics.csv")
+assert len(diagnostics) == 4
 membership = csv_rows(ROOT / "results/cluster_membership.csv")
 assert len(membership) == 27
 
@@ -42,7 +44,7 @@ def check_png(path):
 
 figures = sorted((ROOT / "figures").glob("*.png"))
 screenshots = sorted((ROOT / "screenshots").glob("*.png"))
-assert len(figures) == 18 and len(screenshots) == 6
+assert len(figures) == 20 and len(screenshots) == 6
 for path in figures + screenshots:
     check_png(path)
 
