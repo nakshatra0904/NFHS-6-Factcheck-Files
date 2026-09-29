@@ -10,7 +10,7 @@
 \graphicspath{{figures/}{../figures/}}
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
 \title{Four Questions from India's NFHS-6 Fact Sheets}
-\author{A reproducible pre-doctoral research portfolio}
+\author{Nakshatra Ghosh}
 \date{30 September 2026}
 
 \begin{document}
@@ -53,7 +53,7 @@ variation rather than assuming that education is the only barrier.
 \section{Data and design}
 
 The source is the International Institute for Population Sciences (IIPS)
-\emph{NFHS-6, 2023--24: India and State/UT Fact Sheets}.\footnote{\url{https://www.nfhsiips.in/nfhsuser/assets/National%20Family%20Health%20Survey%20%28NFHS-6%29%202023-2024%20Fact%20Sheets.pdf}}
+\emph{NFHS-6, 2023--24: India and State/UT Fact Sheets}.\footnote{\href{https://www.nfhsiips.in/nfhsuser/assets/National\%20Family\%20Health\%20Survey\%20\%28NFHS-6\%29\%202023-2024\%20Fact\%20Sheets.pdf}{IIPS NFHS-6 India/State fact-sheet PDF.}}
 The extracted CSV has 3,636 area--indicator rows: 101 indicators for India
 and 35 States/UTs. Manipur is absent. Each row contains NFHS-6 urban,
 rural and total estimates, an NFHS-5 total, and its physical PDF page.
@@ -83,12 +83,13 @@ examined, so their tests are exploratory rather than confirmatory.
 
 \section{Model comparison and selection}
 
-Each question uses the same four candidates: an intercept-only
-benchmark, linear OLS, quadratic OLS with one added curvature term,
-and Huber robust linear regression. The quadratic checks curvature but
+Each question uses four models: a mean-only benchmark, linear OLS,
+quadratic OLS with one added curvature term, and Huber robust linear
+regression. The quadratic checks curvature but
 can overfit 27 observations. Huber checks whether large residuals drive
-the slope. We compare them on the same states using leave-one-state-out
-root mean squared prediction error (LOO RMSE). BIC is also saved for the
+the slope. For each state in turn, we fit the model on the other 26 and
+predict the held-out state. We compare root mean squared prediction
+error across the 27 held-out predictions (LOO RMSE). BIC is saved for the
 three OLS models; it is not compared to Huber's different loss.
 LOO ranks prediction, not explanation or causality. A very small RMSE
 advantage does not override the interpretability of a straight line.
