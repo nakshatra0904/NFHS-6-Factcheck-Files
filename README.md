@@ -1,8 +1,8 @@
-# NFHS-6 state fact sheets: a reproducible pre-doc portfolio
+# NFHS-6 state fact sheets
 
 This project turns the [IIPS NFHS-6 India and State/UT fact sheets](https://www.nfhsiips.in/nfhsuser/assets/National%20Family%20Health%20Survey%20%28NFHS-6%29%202023-2024%20Fact%20Sheets.pdf) into an auditable CSV and answers four research questions with R. It also explores seven-dimensional state profiles with principal components and clustering. The source describes the NFHS-6 fact-sheet estimates as provisional. All regression conclusions concern **state-level associations**, not effects on individuals or causal effects.
 
-The [LaTeX report](report/report.tex) gives the full interpretation, limitations, tables and figures. The [data dictionary](data/README.md) defines every column and the indicators used. The [IV note](report/iv_validity_note.md) explains why the fact sheets do not support a credible instrumental-variable design.
+The [compiled report PDF](report/report.pdf) gives the full interpretation, limitations, tables and figures; its [LaTeX source](report/report.tex) is included. The [data dictionary](data/README.md) defines every column and the indicators used. The [IV note](report/iv_validity_note.md) explains why the fact sheets do not support a credible instrumental-variable design.
 
 ## Questions and why they matter
 
@@ -35,6 +35,7 @@ The multivariate section standardizes seven state indicators before PCA and k-me
 | [`figures/`](figures/) | 18 publication-oriented PNG charts; scatterplots, distribution plots, model comparisons, national changes and PCA/cluster displays. |
 | [`screenshots/`](screenshots/) | Six readable PNG summaries of actual R output. |
 | [`report/report.tex`](report/report.tex) | Complete LaTeX report with linked graphs and methods. |
+| [`report/report.pdf`](report/report.pdf) | Compiled, ten-page version of the report by Nakshatra Ghosh. |
 | [`report/iv_validity_note.md`](report/iv_validity_note.md) | Substantive audit of IV candidates and required assumptions. |
 | [`prompts/extraction_prompt.md`](prompts/extraction_prompt.md) | A reusable extraction prompt and verification standard. |
 
@@ -58,7 +59,7 @@ python scripts/extract_nfhs6.py "path/to/National Family Health Survey (NFHS-6) 
 
 The source PDF is not bundled. Its SHA-256 hash in this extraction is `59DEC561E837BEA060B6684A75CACA84E0C982ED9E2670848521755F2AB267F9`. The script expects the IIPS India and State/UT compendium layout, verifies 101 indicators per unit and checks structural and numeric invariants. Selected ambiguous cells were visually checked against the PDF; this is not a complete manual cell audit.
 
-For the report, run `pdflatex report.tex` twice from the `report/` directory with a standard LaTeX installation. This workspace did not have a LaTeX engine, so the source was structurally checked and its image references were verified, but a compiled PDF is not supplied.
+The compiled PDF is included. To rebuild it, run `pdflatex report.tex` twice from the `report/` directory with a standard LaTeX installation, or use Tectonic from the project root: `tectonic report/report.tex`.
 
 ## Boundaries and next study
 
