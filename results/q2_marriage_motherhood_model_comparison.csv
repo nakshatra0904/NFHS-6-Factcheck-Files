@@ -1,0 +1,5 @@
+"question","model","n","loo_rmse","loo_mae","bic","in_sample_r2","rank_rmse"
+"q2_marriage_motherhood","No predictor",27,3.87111897649472,2.76438746438746,154.26773156291,0,4
+"q2_marriage_motherhood","Linear OLS",27,2.88463955308968,2.01973413143001,138.695243867091,0.502831778157588,2
+"q2_marriage_motherhood","Quadratic OLS",27,3.12036549963552,2.30898507326153,141.050385268648,0.519855130126749,3
+"q2_marriage_motherhood","Huber linear",27,2.82035271755753,1.99632346509863,NA,NA,1

@@ -1,0 +1,11 @@
+Exploratory PCA and clustering of 27 state profiles
+Inputs: schooling, internet, child marriage, ANC4, child diet,
+        child stunting, women's overweight; standardized within states.
+KMO: 0.740
+PC1/PC2 variance shares: 59.2% / 14.1%
+Components above permutation 95th percentile: 1
+Minimum leave-one-state-out PC1 loading similarity: 0.996
+Mean silhouette by k: 2 0.317 | 3 0.249 | 4 0.247
+Chosen k: 2; feature-deletion mean ARI: 0.839
+Interpret clusters as exploratory profiles, not fixed state types.
+Source: IIPS NFHS-6 India and State/UT fact sheets.

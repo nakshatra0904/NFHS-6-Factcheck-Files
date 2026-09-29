@@ -1,0 +1,5 @@
+"question","model","n","loo_rmse","loo_mae","bic","in_sample_r2","rank_rmse"
+"q1_schooling_stunting","No predictor",27,5.96302959019081,4.69230769230769,177.597625125098,0,4
+"q1_schooling_stunting","Linear OLS",27,5.19356821388171,3.66162353984411,171.996984280835,0.280716121019477,2
+"q1_schooling_stunting","Quadratic OLS",27,5.2341452083206,3.7032199166115,174.4568441937,0.302645426521316,3
+"q1_schooling_stunting","Huber linear",27,5.15432937584336,3.6427785104913,NA,NA,1

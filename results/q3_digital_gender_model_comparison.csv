@@ -1,0 +1,5 @@
+"question","model","n","loo_rmse","loo_mae","bic","in_sample_r2","rank_rmse"
+"q3_digital_gender","No predictor",27,7.62349994945169,6.33732193732194,190.863097874746,0,4
+"q3_digital_gender","Linear OLS",27,6.89247700481701,5.42863461803375,187.04145919637,0.231727050013725,2
+"q3_digital_gender","Quadratic OLS",27,6.5662341465574,5.25658436316883,187.092947489204,0.318712755458847,1
+"q3_digital_gender","Huber linear",27,6.94826687233521,5.50993934546024,NA,NA,3

@@ -1,0 +1,2 @@
+"question","n","x_mean","y_mean","ols_beta","hc3_se","ci_low","ci_high","p_hc3","r_squared","huber_beta","loo_beta_min","loo_beta_max","best_loo_rmse_model","best_loo_rmse"
+"q2_marriage_motherhood",27,8.04444444444444,3.71481481481481,0.373330181260599,0.0935121404482166,0.180738322857016,0.565922039664182,0.000505314474754759,0.502831778157588,0.339644944992208,0.315863044838055,0.414095453186755,"Huber linear",2.82035271755753

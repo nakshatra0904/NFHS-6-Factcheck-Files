@@ -1,0 +1,10 @@
+State-level descriptive summary (n = 27)
+Means and medians are unweighted across states; units are percentage points.
+Q1 schooling gap mean 19.16, median 20.60; stunting gap mean 5.37, median 4.10
+Q2 child-marriage gap mean 8.04; teenage motherhood gap mean 3.71
+Q3 schooling gender gap mean 5.74; internet gender gap mean 13.83
+Q4 stunting decline mean 5.88; women's overweight rise mean 6.37
+Q4 states with both changes positive: 27 of 27
+India stunting: 35.5% to 29.3% (NFHS-5 to 6)
+India women's overweight: 24.0% to 30.7%
+Source: IIPS NFHS-6 India and State/UT fact sheets.

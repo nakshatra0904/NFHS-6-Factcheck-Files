@@ -1,0 +1,5 @@
+"question","model","n","loo_rmse","loo_mae","bic","in_sample_r2","rank_rmse"
+"q4_nutrition_transition","No predictor",27,3.14137779292301,2.57578347578348,142.988097340739,0,1
+"q4_nutrition_transition","Linear OLS",27,3.32658915124542,2.71294960384846,146.054000246163,0.0084799135848215,2
+"q4_nutrition_transition","Quadratic OLS",27,3.48195786454924,2.77892717616192,148.359554397243,0.0441872087926442,4
+"q4_nutrition_transition","Huber linear",27,3.38123668454524,2.76147911690293,NA,NA,3

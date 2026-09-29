@@ -1,0 +1,13 @@
+QUESTION: Q3: Schooling and internet gender gaps
+State observations: 27
+Linear OLS beta: 0.653 percentage points per point of x
+HC3 robust SE: 0.224
+HC3 95% interval: [0.192, 1.114]
+HC3 p-value (descriptive): 0.0074
+Linear OLS R-squared: 0.232
+Huber linear beta: 0.682
+Leave-one-state-out beta range: [0.520, 0.777]
+Lowest prediction RMSE: Quadratic OLS
+LOO RMSE: No predictor 7.62 | Linear OLS 6.89 | Quadratic OLS 6.57 | Huber linear 6.95
+Interpretation: education is one correlate of access, not its sole cause.
+Source: IIPS NFHS-6 India and State/UT fact sheets.

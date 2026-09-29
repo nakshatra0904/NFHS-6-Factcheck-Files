@@ -1,0 +1,11 @@
+"metric","value"
+"n_states",27
+"n_features",7
+"KMO",0.739565845975195
+"PC1_variance_share",0.592367644329968
+"PC2_variance_share",0.14105724580357
+"parallel_components_above_null95",1
+"pc1_leave_one_state_out_min_loading_correlation",0.99640809517272
+"chosen_k_by_silhouette",2
+"chosen_mean_silhouette",0.316884780371843
+"mean_feature_deletion_ARI",0.838888110163442

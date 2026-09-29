@@ -1,0 +1,13 @@
+QUESTION: Q4: Child stunting decline and women's overweight rise
+State observations: 27
+Linear OLS beta: 0.105 percentage points per point of x
+HC3 robust SE: 0.303
+HC3 95% interval: [-0.520, 0.729]
+HC3 p-value (descriptive): 0.7326
+Linear OLS R-squared: 0.008
+Huber linear beta: 0.113
+Leave-one-state-out beta range: [-0.073, 0.250]
+Lowest prediction RMSE: No predictor
+LOO RMSE: No predictor 3.14 | Linear OLS 3.33 | Quadratic OLS 3.48 | Huber linear 3.38
+Interpretation: two different populations and survey rounds.
+Source: IIPS NFHS-6 India and State/UT fact sheets.
